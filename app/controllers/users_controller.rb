@@ -4,6 +4,12 @@ class UsersController < ApplicationController
   end
 
   def create #for receiving the submitted form and creating a user with the form's parameters
+    user = User.new(user_params)
+    if user.save
+      session[:user_id] = user.id
+      redirect_to '/'
+    else
+      redirect_to '/signup'
   end
 
 end
