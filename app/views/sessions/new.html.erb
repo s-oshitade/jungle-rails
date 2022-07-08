@@ -1,9 +1,22 @@
-<h1>Login</h1>
+<div style="margin: auto; padding:20px; width: auto">
+ <h2 style="text-align: center">Please login here...</h2>
+<div>
 
 <%= form_tag '/login' do %>
+  <div class="card" style="width:500px; margin: auto">
+    <div class="card-body" style="margin: auto">
+      <div class="mb-3" style="width:400px; margin: auto">
+        <h4>Email</h4>
+        <%= text_field_tag :email %>
+      </div>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+      <div class="mb-3" style="width:400px; margin: auto">
+      <h4>Password<h4/>
+        <%= password_field_tag :password %>
+      </div>
 
-<% end %>
+      <%= submit_tag "Submit", class: "btn btn-primary" %>
+  
+    </div>
+  </div>
+  <% end %>
