@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   root to: 'products#index'
-
+  
+  get "about", to: "about#index"
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
