@@ -73,14 +73,14 @@
         <li class="nav-link">
           Signed in as <%= current_user.firstname%>
         </li>
-        <li>
+        <li style="margin-right: 1rem; margin-left: 0.75rem"">
           <%= link_to "Logout", logout_path, class: "nav-link log-out-link" %>
         </li>
       <% else %>
-        <li>
+        <li style="margin-right: 1rem; margin-left: 0.75rem"">
           <%= link_to "Login", login_path, class: "nav-link" %>
         </li>
-        <li>
+        <li style="margin-right: 1rem; margin-left: 0.75rem">
           <%= link_to "Register", signup_path, class: "nav-link" %>
         </li>
     <% end %>
